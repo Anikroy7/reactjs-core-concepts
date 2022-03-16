@@ -1,6 +1,41 @@
 import logo from './logo.svg';
 import './App.css';
-const tourPlaces = ['cox-bazar', 'bandorbon', 'kolkata', 'birvum', 'tamil-naru', 'panjab', 'sona-gachi', 'kashmir']
+import { useState } from 'react';
+function App() {
+  return (
+    <div className='App'>
+      <Counter></Counter>
+
+    </div>
+  );
+}
+function Counter() {
+  const [count, setCount] = useState(12);
+  const Increase = () => setCount(count + 1);
+  const Decrease = () => setCount(count - 1);
+
+  /* function Increase() {
+    const newCount = count + 1;
+    setCount(newCount);
+  }
+ */
+  return (
+    <div>
+      <h1>counter: {count}</h1>
+      <button onClick={Increase}>+</button>
+      <p></p>
+      <button onClick={Decrease}>-</button>
+    </div>
+  )
+}
+
+
+export default App;
+
+
+// react core concepts
+
+/* const tourPlaces = ['cox-bazar', 'bandorbon', 'kolkata', 'birvum', 'tamil-naru', 'panjab', 'sona-gachi', 'kashmir']
 const countries = [
   { name: 'Bangladesh', capital: 'Dhaka', area: 'asia' },
   { name: 'India', capital: 'Dehlli', area: 'asia' },
@@ -42,6 +77,4 @@ function DisplayCountries(props) {
       <p>Area: {props.area}</p>
     </div>
   )
-}
-
-export default App;
+} */
