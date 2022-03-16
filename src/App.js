@@ -1,42 +1,47 @@
 import logo from './logo.svg';
 import './App.css';
+const tourPlaces = ['cox-bazar', 'bandorbon', 'kolkata', 'birvum', 'tamil-naru', 'panjab', 'sona-gachi', 'kashmir']
+const countries = [
+  { name: 'Bangladesh', capital: 'Dhaka', area: 'asia' },
+  { name: 'India', capital: 'Dehlli', area: 'asia' },
+  { name: 'U.S.A', capital: 'new-york', area: 'urope' },
+  { name: 'Bangladesh', capital: 'Dhaka', area: 'asia' },
+  { name: 'India', capital: 'Dehlli', area: 'asia' },
+  { name: 'U.S.A', capital: 'new-york', area: 'urope' },
+  { name: 'Bangladesh', capital: 'Dhaka', area: 'asia' },
+  { name: 'India', capital: 'Dehlli', area: 'asia' },
+  { name: 'U.S.A', capital: 'new-york', area: 'urope' },
 
+]
 function App() {
   return (
     <div className="App">
-      <h1 className='App-link'>These are English Bands</h1>
-      <EnglishBands name="Pink-floyed" guitarist="david-glamour"></EnglishBands>
-      <EnglishBands name="Dream-theater" guitarist="jhon-pretucci"></EnglishBands>
-      <EnglishBands name="Metalica" guitarist="girat-raw"></EnglishBands>
-      <EnglishBands name="Ac/Dc" guitarist="Mike-shinda"></EnglishBands>
-      <EnglishBands name="Megadeath" guitarist="blur-akline"></EnglishBands>
-      <h1>These are Bangladeshi Bands</h1>
-      <BengaliBands name="Artcell" vocal="lincon" guitarist="ershad"></BengaliBands>
-      <BengaliBands name='Warfaze' vocal='minar' guitarist='kamal'></BengaliBands>
-      <BengaliBands name='Nemesis' vocal='zohad' guitarist='maher khan'></BengaliBands>
-      <BengaliBands name='Arthohin' vocal='Bass Baba sumon' guitarist='shisir'></BengaliBands>
-      <BengaliBands name='Avoid rafa' vocal='rafa' guitarist='rafa'></BengaliBands>
-
+      {
+        tourPlaces.map(place => <DisplayPlaces name={place}></DisplayPlaces>)
+      }
+      {
+        countries.map(country => <DisplayCountries name={country.name} capital={country.capital} area={country.area}></DisplayCountries>)
+      }
     </div>
   );
 }
 
-function EnglishBands(props) {
-  console.log(props)
+function DisplayPlaces(props) {
   return (
     <div className='place'>
-      <h1>Band-Name: {props.name}</h1>
-      <h3>Singer: {props.guitarist}</h3>
+      <h1>name: {props.name}</h1>
     </div>
   )
 }
-function BengaliBands(props) {
+function DisplayCountries(props) {
+  console.log(props)
   return (
-    <section className='container '>
-      <h1>Band-name: {props.name}</h1>
-      <h2>Vocal: {props.vocal}</h2>
-      <h2>Guitarist: {props.guitarist}</h2>
-    </section>
+    <div className='container'>
+      <h2>Name: {props.name}</h2>
+      <p>Capital: {props.capital}</p>
+      <p>Area: {props.area}</p>
+    </div>
   )
 }
+
 export default App;

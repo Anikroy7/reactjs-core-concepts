@@ -47,9 +47,10 @@
 }
 .place{
   background-color: rgb(222, 246, 250);
-  color: #282c34;
-  border: 5px solid rgb(76, 21, 128);
+  color: #5a8ffa;
+  border: 5px solid rgb(253, 97, 50);
   padding: 20px;
   border-radius: 28px;
   margin: 23px;
 }
+
