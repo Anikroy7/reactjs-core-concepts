@@ -32,25 +32,26 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-.container{
+.container {
   color: #61dafb;
   background-color: black;
   padding: 10px;
-  border: 5px solid blueviolet;
+  border: 5px solid rgb(127, 42, 206);
   border-radius: 10px;
   margin: 23px;
 }
-.place{
-  background-color: rgb(222, 246, 250);
-  color: #5a8ffa;
+
+.place {
+  background-color: rgb(236, 251, 253);
+  color: #6998f6;
   border: 5px solid rgb(253, 97, 50);
   padding: 20px;
   border-radius: 28px;
   margin: 23px;
 }
-
